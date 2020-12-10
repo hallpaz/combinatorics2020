@@ -53,7 +53,13 @@ $$\frac{n(n-2)(n-2)}{24}$$
 $$ex_\circlearrowright(n,\{M_1, S_1, D_1\}) \ge \triangle(n)$$
 
 * Frankl, Holmsen and Kupavskii posed the following problem: *What happens if one relaxes the intersecting condition and allows triangles to intersect on the boundary?*
+* One way to see it is we allow $S_1$ and $D_1$ and look for $ex_\circlearrowright(n,M_1)$
+
+---
+### Construction 2
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5NjEzODk3MiwzODU5NjE3ODZdfQ==
+eyJoaXN0b3J5IjpbMTQ5Nzk1Njg0NiwzODU5NjE3ODZdfQ==
 -->
