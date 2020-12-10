@@ -68,9 +68,13 @@ For n ≥ 3 odd, the unique cgh in H?(n) is obtained by adding all triangles con
 FIGURAS  4 e 5
 
 --- 
-## Proof of 
+## Proof of Theorem 1 (partial)
 
+For all $n ≥ 3$, if $H$ is an extremal n-vertex $M_1$-free cgh, then $H ∈ \mathcal{H}'(n)$ and:
 
+$$ex_\circlearrowright(n,M_1) = \triangle(n) + \frac{n(n-3)}{2}$$
+
+Let n ≥ 3 be odd. If H ∈ H?(n) then we are done, so we may assume H contains a triangle T(i, j, k) = {vi, vj, vk} with vi < vj < vk < vi+(n−1)/2. Moreover, we may assume that among all such triangles, T(i, j, k) is the triangle where the longest edge {vi, vk} is as short as possible. Replace all triangles T(i, j?, k) ∈ H with i < j? < k with all triangles T(i − 1, k + 1, l) where j and l are on opposite sides of the edge {vi, vk} as shown in Figure 4. Since T(i, j, k) and T(i − 1, k + 1, l) form a copy of M1, T(i − 1, k + 1, l) ?∈ H for all such l. Moreover, since vi < vk < vi+(n−1)/2, the number of triangles T(i − 1, k + 1, l) that we added is greater than the number of triangles T(i, j, k) that we deleted. Consequently, this produces a cgh H? with |H?| > |H|. Since H is extremal M1-free, there exists a copy of M1 in H?, which must contain a triangle T(i − 1, k + 1, l) ∈ H?. Since all triangles T(i − 1, k + 1, l) intersect, the other triangle in the copy of M1 must be T(f, g, h) ∈ H. Since H is M1-free, T(f, g, h) intersects T(i, j, k), which implies vi ≤ vf < vg < vh ≤ vk and {vf, vh} ?= {vi, vk}. However, then the edge {vf, vh} is shorter than the edge {vi, vk}, a contradiction.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0MTk0MjkyMiwzODU5NjE3ODZdfQ==
+eyJoaXN0b3J5IjpbMTE1ODM4NjU2MywzODU5NjE3ODZdfQ==
 -->
