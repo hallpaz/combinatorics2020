@@ -18,6 +18,9 @@ For all $n ≥ 3$, if $H$ is an extremal n-vertex $M_1$-free cgh, then $H ∈ \m
 $$ex_\circlearrowright(n,M_1) = \triangle(n) + \frac{n(n-3)}{2}$$
 ---
 ## Construction 1 - $\mathcal{H}^*(n)$
+
+For n ≥ 3 odd, let $\mathcal{H}^*(n)$ comprise the single cgh consisting of triangles which contain in their interior the centroid of $\Omega_n$. For $n ≥ 4$ even, each $H \in \mathcal{H}^*(n)$$ consists of all triangles which contain the centroid of Ωn and, for each diameter {vi, vi+n/2} of Ωn, we either add all triangles {vi, vj, vi+n/2} where vi < vj < vi+n/2, or all triangles {vi, vj, vi+n/2} where vi+n/2 < vj < vi.
+Let
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3MjA5MjkxMV19
+eyJoaXN0b3J5IjpbLTE2NDQzMTk1MjddfQ==
 -->
