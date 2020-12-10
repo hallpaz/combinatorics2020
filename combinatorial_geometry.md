@@ -41,9 +41,12 @@ $$\frac{n}{3}(1 + 2 + ... + \frac{n-1}{2}) = \frac{(n+1)n(n-1)}{24} $$
 FIGURA 3
 
 ---
-**If $n$ is even** then we do the same count, but first excluding the triangles with one side being the diameter of the circle. We get:
-$$\frac{n(n-2)(n-4}{24}$$
+* **If $n$ is even** then we do the same count, but first excluding the triangles with one side being the diameter of the circle. We get:
+$$\frac{n(n-2)(n-4)}{24}$$
+
+* Next, out of triangles with one side being the diameter exactly half of them contain $x$, which equals $\frac{n(n−2)}{4}$  Summing up, we get that the number of triangles containing x is 
+$$\frac{n(n-2)(n-2)}{24}$$
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Njg4NjQyOTEsMzg1OTYxNzg2XX0=
+eyJoaXN0b3J5IjpbMTUxNTY4NDc2OCwzODU5NjE3ODZdfQ==
 -->
