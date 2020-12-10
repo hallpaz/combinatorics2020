@@ -50,8 +50,8 @@ $$\frac{n(n-2)(n-2)}{24}$$
 ---
 * As no two triangles in any $H \in \mathcal{H}^*(n)$ have disjoint interiors, we have:
 
-$$$$ex_\circlearrowright(n,M_1) = \triangle(n) + \frac{n(n-3)}{2}$$$$
+$$ex_\circlearrowright(n,\{M_1, S_1, D_1\}) \ge \triangle(n)$$
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczODMxNTgyMiwzODU5NjE3ODZdfQ==
+eyJoaXN0b3J5IjpbMjEyMjk4Mjg3MiwzODU5NjE3ODZdfQ==
 -->
