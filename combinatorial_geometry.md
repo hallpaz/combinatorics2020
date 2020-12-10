@@ -47,6 +47,11 @@ $$\frac{n(n-2)(n-4)}{24}$$
 * Next, out of triangles with one side being the diameter exactly half of them contain $x$, which equals $\frac{n(n−2)}{4}$  Summing up, we get that the number of triangles containing x is 
 $$\frac{n(n-2)(n-2)}{24}$$
 
+---
+* As no two triangles in any $H \in \mathcal{H}^*(n)$ have disjoint interiors, we have:
+
+$$$$ex_\circlearrowright(n,M_1) = \triangle(n) + \frac{n(n-3)}{2}$$$$
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxNTY4NDc2OCwzODU5NjE3ODZdfQ==
+eyJoaXN0b3J5IjpbMTczODMxNTgyMiwzODU5NjE3ODZdfQ==
 -->
