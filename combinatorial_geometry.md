@@ -82,11 +82,13 @@ Let n ≥ 3 be odd.
 FIGURA PDF
 
 * Since T(i, j, k) and T(i − 1, k + 1, l) form a copy of M1, T(i − 1, k + 1, l) ?∈ H for all such l. Moreover, since vi < vk < vi+(n−1)/2, the number of triangles T(i − 1, k + 1, l) that we added is greater than the number of triangles T(i, j, k) that we deleted. 
-	* Note that none of $T(i-1, k+1, l)$ is in $H$
+	* Note that none of $T(i-1, k+1, l)$ is in $H$, otherwise they would form a copy of $M_1$ with $T(i, j, k)$
 * This produces a cgh H? with |H?| > |H|. Since H is extremal M1-free, there exists a copy of M1 in H?, which must contain a triangle T(i − 1, k + 1, l) ∈ H?
 *  Since all triangles T(i − 1, k + 1, l) intersect, the other triangle in the copy of M1 must be T(f, g, h) ∈ H. 
 * Since H is M1-free, T(f, g, h) intersects T(i, j, k), which implies vi ≤ vf < vg < vh ≤ vk and {vf, vh} ?= {vi, vk}. 
 * However, then the edge {vf, vh} is shorter than the edge {vi, vk}, a contradiction.
+---
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyMDAxNzgzNSwzODU5NjE3ODZdfQ==
+eyJoaXN0b3J5IjpbMzE5ODc4MTMwLDM4NTk2MTc4Nl19
 -->
