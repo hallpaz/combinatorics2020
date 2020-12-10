@@ -37,7 +37,14 @@ $$\frac{n}{3}(1 + 2 + ... + \frac{n-1}{2}) = \frac{(n+1)n(n-1)}{24} $$
 
 ---
 **For $n ≥ 4$ even**, each $H \in \mathcal{H}^*(n)$ consists of all triangles which contain the centroid of $\Omega_n$ and, for each diameter $\{ v_i, v_{i+n/2}\}$ of $\Omega_n$, we either add all triangles $\{v_i, v_j, v_{i+n/2}\}$ where $v_i < v_j < v_{i+n/2}$, or all triangles $\{v_i, v_j, v_{i+n/2}\}$ where $v_{i+n/2} < v_j < v_i$.
+
+FIGURA 3
+
 ---
+If n is even then we do the same count, but first excluding the t?riangles with one s?ide
+=
+being the diameter of S1. The
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTgwMDA0MTYsMzg1OTYxNzg2XX0=
+eyJoaXN0b3J5IjpbNjkwMDU5ODEzLDM4NTk2MTc4Nl19
 -->
