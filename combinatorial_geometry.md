@@ -63,7 +63,14 @@ For n ≥ 3 odd, the unique cgh in H?(n) is obtained by adding all triangles con
 
 [FIGURA PDF]
 
+* By inspection, every cgh in H?(n) is M1-free, and has size ·?(n) + n(n − 3)/2.
+
+FIGURAS  4 e 5
+
+--- 
+## Proof of 
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyNzE4OTcyMiwzODU5NjE3ODZdfQ==
+eyJoaXN0b3J5IjpbLTI0MTk0MjkyMiwzODU5NjE3ODZdfQ==
 -->
