@@ -16,6 +16,11 @@
 For all $n ≥ 3$, if $H$ is an extremal n-vertex $M_1$-free cgh, then $H ∈ \mathcal{H}'(n)$ and:
 
 $$ex_\circlearrowright(n,M_1) = \triangle(n) + \frac{n(n-3)}{2}$$
+
+where: 
+
+
+
 ---
 ## Construction 1 - $\mathcal{H}^*(n)$
 
@@ -26,11 +31,11 @@ $$ex_\circlearrowright(n,M_1) = \triangle(n) + \frac{n(n-3)}{2}$$
 * There are i + 1 choices of $v′, v′′$ so that the shorter arc has exactly $i$ vertices of $\Omega_n$ in the interior, and $i ≤ n−3$.
 * Summing over $i$ (and dividing by 3 because we count each triangle 3 times), we get that the number of triangles containing $x$ equals:
 
-$$\frac{n}{3}(1 + 2 +  $$
+$$\frac{n}{3}(1 + 2 + ... + \frac{n-1}{2}) = \frac{(n+1)n(n-1)}{24} $$
 
 ---
 **For $n ≥ 4$ even**, each $H \in \mathcal{H}^*(n)$ consists of all triangles which contain the centroid of $\Omega_n$ and, for each diameter $\{ v_i, v_{i+n/2}\}$ of $\Omega_n$, we either add all triangles $\{v_i, v_j, v_{i+n/2}\}$ where $v_i < v_j < v_{i+n/2}$, or all triangles $\{v_i, v_j, v_{i+n/2}\}$ where $v_{i+n/2} < v_j < v_i$.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzk2Mjk0NzIsMzg1OTYxNzg2XX0=
+eyJoaXN0b3J5IjpbLTIwMzI3ODQ5NTgsMzg1OTYxNzg2XX0=
 -->
