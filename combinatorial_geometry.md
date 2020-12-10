@@ -56,10 +56,14 @@ $$ex_\circlearrowright(n,\{M_1, S_1, D_1\}) \ge \triangle(n)$$
 * One way to see it is we allow $S_1$ and $D_1$ and look for $ex_\circlearrowright(n,M_1)$
 
 ---
+# FORMATAR DAQUI PRA BAIXO
 ### Construction 2
 
+For n ≥ 3 odd, the unique cgh in H?(n) is obtained by adding all triangles containing a pair {vi, vi+(n−1)/2} to any cgh in H?(n) (left diagram in Figure 2). For n ≥ 4 even, H?(n) is obtained by adding all triangles containing a diameter of Ωn, plus all triangles containing a pair from a set of n/2 pairwise intersecting pairs of the form {vi, vi+n/2−1} (right diagram in Figure 2).
+
+[FIGURA PDF]
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5Nzk1Njg0NiwzODU5NjE3ODZdfQ==
+eyJoaXN0b3J5IjpbLTIyNzE4OTcyMiwzODU5NjE3ODZdfQ==
 -->
