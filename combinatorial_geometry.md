@@ -23,12 +23,11 @@ $$ex_\circlearrowright(n,M_1) = \triangle(n) + \frac{n(n-3)}{2}$$
 
 [FIGURA]
 
-There are i + 1 choices of v′, v′′
-so that the shorter arc has exactly i vertices of Kn in the
-interior, and i ≤ n−3
+There are i + 1 choices of $v′, v′′$ so that the shorter arc has exactly $i$ vertices of $\Omega_n$ in the interior, and $i ≤ n−3$.
+
 ---
 **For $n ≥ 4$ even**, each $H \in \mathcal{H}^*(n)$ consists of all triangles which contain the centroid of $\Omega_n$ and, for each diameter $\{ v_i, v_{i+n/2}\}$ of $\Omega_n$, we either add all triangles $\{v_i, v_j, v_{i+n/2}\}$ where $v_i < v_j < v_{i+n/2}$, or all triangles $\{v_i, v_j, v_{i+n/2}\}$ where $v_{i+n/2} < v_j < v_i$.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTUxNDAzMzg3XX0=
+eyJoaXN0b3J5IjpbMzg1OTYxNzg2XX0=
 -->
