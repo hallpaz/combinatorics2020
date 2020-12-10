@@ -23,8 +23,8 @@ $$ex_\circlearrowright(n,M_1) = \triangle(n) + \frac{n(n-3)}{2}$$
 
 
 ---
-**For $n ≥ 4$ even**, each $H \in \mathcal{H}^*(n)$ consists of all triangles which contain the centroid of $\Omega_n$ and, for each diameter $\{ v_i, v_{i+n/2}\}$ of $\Omega_n$, we either add all triangles $\{vi, vj, vi+n/2\}$ where vi < vj < vi+n/2, or all triangles {vi, vj, vi+n/2} where vi+n/2 < vj < vi.
+**For $n ≥ 4$ even**, each $H \in \mathcal{H}^*(n)$ consists of all triangles which contain the centroid of $\Omega_n$ and, for each diameter $\{ v_i, v_{i+n/2}\}$ of $\Omega_n$, we either add all triangles $\{v_i, v_j, v_{i+n/2}\}$ where $v_i < v_j < v_{i+n/2}$, or all triangles $\{v_i, v_j, v_{i+n/2}\}$ where $v_{i+n/2} < v_j < v_i$.
 Let
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDE4Mzg1MzM4XX0=
+eyJoaXN0b3J5IjpbMTg3MzAzMzE3MF19
 -->
