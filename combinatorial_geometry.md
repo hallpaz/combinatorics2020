@@ -41,10 +41,9 @@ $$\frac{n}{3}(1 + 2 + ... + \frac{n-1}{2}) = \frac{(n+1)n(n-1)}{24} $$
 FIGURA 3
 
 ---
-If n is even then we do the same count, but first excluding the t?riangles with one s?ide
-=
-being the diameter of S1. The
+**If $n$ is even** then we do the same count, but first excluding the triangles with one side being the diameter of the circle. We get:
+$$\frac{n(n-2)(n-4}{24}$$
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjkwMDU5ODEzLDM4NTk2MTc4Nl19
+eyJoaXN0b3J5IjpbLTE3Njg4NjQyOTEsMzg1OTYxNzg2XX0=
 -->
