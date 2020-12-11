@@ -18,7 +18,7 @@ December 11th 2020
 * Let the extremal function $ex_\circlearrowright(n,F)$ denote the maximum number of edges in an r-uniform cgh on n points that does not contain F – *an F-free cgh*
 ---
 * We'll analyse the intersection patterns of pairs of triangles (r = 3)
-![configuracoes](img/configuracoes8.png)
+![configuracoes](img/config8.png)
 ----
 # Warm up
 
@@ -226,7 +226,7 @@ $$ex_{\to}(n, M_3)=  {n \choose 3} - {n - 3 \choose 3}$$
 * let $H_2$ consists of all $e \in H$ with $v_0\in e$, $v_1\not\in e$ and $e - v_0 + v_1 \in H$
 * Let $H_3$ be obtained from $H \backslash (H_1 \cup H_2)$ by merging the vertices $v_0$ and $v_1$.
   * $H_3$ is a $M_3$-free cgh with $n-1$ vertices
-  * $|H_3| \le {n-1\choose 3} - {n-4\choose 3}$
+  * By induction hypothesis: $|H_3| \le {n-1\choose 3} - {n-4\choose 3}$
 
   #### Let's bound $|H_2|$ !
 
@@ -234,7 +234,7 @@ $$ex_{\to}(n, M_3)=  {n \choose 3} - {n - 3 \choose 3}$$
 # Bounding $|H_2|$
 * Consider $G = \{\{u,v\} : \{v_0,u,v\} \in H_2\}$ 
     * this is the *link graph* of $v_0$ with vertex set $\{v_2,v_3,\dots,v_{n-1}\}$ with the natural ordering. 
-* G doesn't have crossing edges (let's prove)
+* $G$ doesn't have crossing edges (let's prove)
 --- 
 * Suppose two edges of $G$ cross --say $\{u,v\},\{w,x\} \in G$ with $u < w < v < x$
   * By definition of $H_2$ these edges are linked to $v_0$ and $v_1$ in H
@@ -243,7 +243,7 @@ $$ex_{\to}(n, M_3)=  {n \choose 3} - {n - 3 \choose 3}$$
 
 ---
 * Therefore no two edges of $G$ cross 
-  * Which implies $G$ is an outerplane graph with $n - 2$ vertices. 
+  * Which implies $G$ is an outerplanar graph with $n - 2$ vertices. 
   * $|G| \leq 2n - 7$, by Euler's Formula.
 * We know $|G| = |H_2|$ 
 * So, we can bound $|H|$:
@@ -270,13 +270,13 @@ $$ex(n,M_2) = {n \choose 2} - 2$$
 ---
 # Proof of Theorem 5
 
-* Strategy is induction on $n$
+* The strategy is induction on $n$
   * When $n=7$, since cyclically consecutive triples $\{v_i,v_{i+1},v_{i+2}\}$ are never in $M_2$, we may assume these seven edges are in any $M_2$-free cgh. 
   * For the remaining 28 triples, we create a graph with vertex sets consisting of these triples and form an edge if two of the triples form a copy of $M_2$. 
   * A computer aided calculation  then yields this graph has independence number $12$ and hence $ex(7,M_2) = 12 + 7 = \binom{7}{2}-2$.
 --- 
 # Proof of theorem 5 
-* For the induction step, we plan to find two consecutive $u,v \in \Omega_n$ with degree at most 3 and whose common link graph $G_{u} \cap G_{v}$ has at most $n - 3$ edges.
+* For the induction step, we plan to find two consecutive $u,v \in \Omega_n$ with degree at most 3 and whose common link graph $G_{u} \cap G_{v}$ has at most $n - 4$ edges.
 
 --- 
 # Definitions
@@ -288,7 +288,7 @@ $$ex(n,M_2) = {n \choose 2} - 2$$
 
 --- 
 
-# Lemma 6.1 (should be 5.1)
+# Lemma 6.1
 Let $H \subset \binom{\Omega_n}{3}$ be a maximal $M_2$-free cgh and $H'$ be as above. Then 
 1. For consecutive $u,v \in \Omega_n$, $|G_{u} \cap G_{v}| \leq n - 3$ with equality only if $G_u \cap G_v$ is a star.
 2. There exists $v_i \in \Omega_n$ such that the degree of $\{v_{i},v_{i + 1}\}$ is at most three in $H$.
@@ -311,7 +311,7 @@ Let $H \subset \binom{\Omega_n}{3}$ be a maximal $M_2$-free cgh and $H'$ be as a
     * then $\{u,y,z\},\{v,w,x\}$ form $M_2$. 
 ![](img/im16.png)
 --- 
-* So $G_{u,v}$ has no pair of consecutive edges.
+* So $G_{u,v}$ has no pair of disjoint edges.
 * It is a standard fact that the unique extremal graphs with at least four vertices and no pair of disjoint edges are stars, and therefore $G_{u,v}$ has at most $n - 3$ edges.
 --- 
 # Proof of Lemma 6.1 (2)
@@ -323,23 +323,26 @@ There exists $v_i \in \Omega_n$ such that the degree of $\{v_{i},v_{i + 1}\}$ is
 * Suppose every pair of consecutive vertices has degree at least four in $H$ and hence degree at least two in $H'$. (we seek a contradiction)
 
 ---
-* We first show there exists $e \in H'$ with $\ell(e) \geq 3$. If not, then $\{v_i, v_{i + 1}, v_{i + 3}\} \in H'$ and $\{v_{i - 2}, v_i, v_{i + 1}\} \in H'$ for all $i$ and there are no other edges in $H'$. 
+* We first show there exists $e \in H'$ with $\ell(e) \geq 3$. 
+  * If not, then $\{v_i, v_{i + 1}, v_{i + 3}\} \in H'$ and $\{v_{i - 2}, v_i, v_{i + 1}\} \in H'$ for all $i$ and there are no other edges in $H'$. 
   * However, then $\{v_0, v_1, v_3\}  \in H'$ and $\{v_2, v_4, v_5\}  \in H'$ form $M_2$, a contradiction. 
-  * So there exists $e \in H'$ with $\ell(e) \geq 3$.
+* So there exists $e \in H'$ with $\ell(e) \geq 3$.
 
 ---
 * From all $e \in H'$ with $\ell(e) \geq 3$, pick $e$ so that $\ell(e) = j \geq 3$ is a minimum. 
 * Suppose $e = \{v_0,v_1, v_{j + 1}\}$, so $\ell(e) = d(v_1,v_{j + 1})$ 
   * (the proof for $e$ of the form $\{v_{n - j}, v_0, v_1\}$ with $\ell(e) = j = d(v_{n-j},v_0) \geq 3$ will be symmetric)
-* Then the pair $\{v_{j - 1},v_{j}\}$ has degree at least two in $H'$ 
+* By hypothesis, the pair $\{v_{j - 1},v_{j}\}$ has degree at least two in $H'$ 
   * so there are edges $f = \{v_h,v_{j-1},v_j\}$ and $g = \{v_k,v_{j-1},v_j\}$ in $H'$. 
 
 ---
-* Then the pair $\{v_{j - 1},v_{j}\}$ has degree at least two in $H'$ 
+* By hypothesis the pair $\{v_{j - 1},v_{j}\}$ has degree at least two in $H'$ 
   * so there are edges $f = \{v_h,v_{j-1},v_j\}$ and $g = \{v_k,v_{j-1},v_j\}$ in $H'$. 
-  * If $j + 1 < k \leq n - 1$ or $j + 1 < h \leq n - 1$, then $f$ and $e$ or $g$ and $e$ respectively form $M_2$, a contradiction. 
+  * If $j + 1 < k \leq n - 1$ or $j + 1 < h \leq n - 1$, 
+    * then $f$ and $e$ or $g$ and $e$ respectively form $M_2$, a contradiction. 
+    ![](img/im18.png)
   * So $0 \leq h,k \leq j - 3$, recalling $\{v_{j-2},v_{j-1},v_j\} \not \in H'$.
-![](img/im18.png)
+
 
 --- 
 Now, as $h$ and $k$ are distinct, we may assume $h < k$:
@@ -350,11 +353,13 @@ and so: $\ell(f) \geq 3$.
 
 $$\ell(f) = d(v_h,v_{j - 1}) < d(v_0,v_j) = \ell(e)$$
 
-* Contradicting the choice of $e$. This final contradiction proves (2).
+* Contradicting the choice of $e$. 
+
+***=> So there's a pair of consecutive vertices with degree at most 3 in H.***
 
 --- 
 
-* Let $\{v_i,v_{i + 1}\}$ have degree at most three in $H$, as guaranteed by Lemma 5.1 part (2). 
+* Let $\{v_i,v_{i + 1}\}$ have degree at most three in $H$, as guaranteed by Lemma 6.1 part (2). 
 * We contract the pair $\{v_i,v_{i+1}\}$ to a vertex $w$ to get a cgh $H_0$ with $n - 1$ vertices. 
   * Note $H_0$ is $M_2$-free
 * Let $G = \{\{u,v\} : \{u,v,v_i\},\{u,v,v_{i+1}\} \in H \}$ be the common link graph of $v_i$ and $v_{i + 1}$.
@@ -365,28 +370,50 @@ Let $G$ be the common link graph of $v_i$ and $v_{i + 1}$. Then $|G| \leq n - 4$
 
 --- 
 # Proof Lemma 6.2
-* If neither of $\{v_{i-1},v_i,v_{i+2}\}$ or $\{v_{i-1},v_{i+1},v_{i+2}\}$ is in $H$, then $\{v_{i-1},w,v_{i+2}\} \not \in H_0$ and $|G| \leq n - 4$ follows from Lemma 6.1 part (1). So we assume $\{v_{i-1},v_i,v_{i+2}\} \in H$ or $\{v_{i-1},v_{i+1},v_{i+2}\} \in H$.
+* If neither of $\{v_{i-1},v_i,v_{i+2}\}$ or $\{v_{i-1},v_{i+1},v_{i+2}\}$ is in $H$, 
+  * then $\{v_{i-1},w,v_{i+2}\} \not \in H_0$ and $|G| \leq n - 4$ follows from Lemma 6.1 part (1). 
+* So we assume $\{v_{i-1},v_i,v_{i+2}\} \in H$ or $\{v_{i-1},v_{i+1},v_{i+2}\} \in H$.
 
 ---
-* Case 1 $\{v_{i-1},v_i,v_{i+2}\} \in H$. Suppose $G$ is a star with $n - 3$ edges, with center $v_k$  
-* If $v_k \notin \{v_{i-1}, v_{i+2} \}$, then letting $v_j \notin \{ v_k,v_{i-1},v_i, v_{i+1}, v_{i+2} \}$, it follows that $\{v_i,v_j,v_k\}$ and $\{v_{i-1},v_{i},v_{i+2}\}$ form a copy of $M_2$. 
+* Case 1 $\{v_{i-1},v_i,v_{i+2}\} \in H$. 
+* Suppose $G$ is a star with $n - 3$ edges, with center $v_k$  
+* If $v_k \notin \{v_{i-1}, v_{i+2} \}$, then letting $v_j \notin \{ v_k,v_{i-1},v_i, v_{i+1}, v_{i+2} \}$
+  * $\{v_{i+1},v_j,v_k\}$ and $\{v_{i-1},v_{i},v_{i+2}\}$ form a copy of $M_2$. 
 ![](img/im19.png)
 ---
-* Hence, we may assume that $v_k= v_{i-1}$ or $v_k= v_{i+2}$. Both of these cases are similar, so consider only the case $v_k=v_{i+2}$. We may assume that $\{ v_{i+3}, v_{i+4} \}$ has degree at least three. Then there is at least one triple which contains $\{ v_{i+3}, v_{i+4} \}$ of the form $\{v,v_{i+3},v_{i+4}\}$. If $v \in \Omega_n$ and $v_{i+4} < v < v_{i+1}$, then $\{v,v_{i+3},v_{i+4}\}$ and $\{v_{i+1},v_{i+2},v_{i+5}\}$ form $M_2$. If $v=v_{i+1}$, then $\{v,v_{i+3},v_{i+4}\}$ and $\{v_{i-1},v_i,v_{i+2}\}$ form $M_2$. So $G$ is not a star
-with $n - 3$ edges, and Lemma 6.1 part (1) gives $|G| \leq n - 4$.
+* Hence, we may assume that $v_k= v_{i-1}$ or $v_k= v_{i+2}$. 
+  * Both of these cases are similar, so consider only the case $v_k=v_{i+2}$. 
+* We may assume that $\{ v_{i+3}, v_{i+4} \}$ has degree at least three. 
+  * Then there is at least one triple which contains $\{ v_{i+3}, v_{i+4} \}$ of the form $\{v,v_{i+3},v_{i+4}\}$.
+
+---
+* There is at least one triple which contains $\{ v_{i+3}, v_{i+4} \}$ of the form $\{v,v_{i+3},v_{i+4}\}$. 
+  * If $v \in \Omega_n$ and $v_{i+4} < v < v_{i+1}$
+    * then $\{v,v_{i+3},v_{i+4}\}$ and $\{v_{i+1},v_{i+2},v_{i+5}\}$ form $M_2$. 
+  * If $v=v_{i+1}$
+    * then $\{v,v_{i+3},v_{i+4}\}$ and $\{v_{i-1},v_i,v_{i+2}\}$ form $M_2$.
+![](img/im20.png)
+
+---
+* We may assume that $\{ v_{i+3}, v_{i+4} \}$ has degree at least three. 
+  * There is at least one triple which contains $\{ v_{i+3}, v_{i+4} \}$ of the form $\{v,v_{i+3},v_{i+4}\}$. 
+  * If $v \in \Omega_n$ and $v_{i+4} < v < v_{i+1}$
+    * then $\{v,v_{i+3},v_{i+4}\}$ and $\{v_{i+1},v_{i+2},v_{i+5}\}$ form $M_2$. 
+  * If $v=v_{i+1}$
+    * then $\{v,v_{i+3},v_{i+4}\}$ and $\{v_{i-1},v_i,v_{i+2}\}$ form $M_2$.
+* So $G$ is not a star with $n - 3$ edges, and Lemma 6.1 part (1) gives $|G| \leq n - 4$.
 
 --- 
 
 * Case 2. $\{v_{i-1},v_{i+1},v_{i+2}\}\in H$. In this case, a symmetric argument to that used for $\{v_{i-1},v_i,v_{i+2}\} \in H$ applies by reversing the orientation of $\Omega_n$.
 
 --- 
-* To complete the proof of $|H| \leq {n \choose 2} - 2$, we note by inspection that $H_0$ is also $M_2$-free. By induction, $|H_0| \leq {n - 1 \choose 2} - 2$.
-* By Lemma 6.2, and recalling $d_H(v_i,v_{i + 1}) \leq 3$,
+* To complete the proof of $|H| \leq {n \choose 2} - 2$, we have:
+$$ |H| = |H_0| + |G| + d_H(v_1, v_{i+1})$$
+* By the induction hypothesis, Lemma 6.2, and recalling $d_H(v_i,v_{i + 1}) \leq 3$,
 $$ |H| = |H_0| + |G| + d_H(v_i,v_{i + 1}) \leq {n - 1 \choose 2} - 2 + n - 4 + 3 = {n \choose 2} - 2. $$
 
 This proves Theorem.
-
-![](img/im20.png)
 
 --- 
 # Crossing triangles with a common vertex, $S_3$
@@ -432,7 +459,7 @@ $$3|H| = \sum\limits_{i=0}^{n-1}(|G_i'|+|G_i''|) $$
 * and let $G_i'' = G_i \backslash G_i'$.
 
 --- 
-# Lemma 7.1 (should be 6.1)
+# Lemma 7.1
 Let $H \subset \binom{\Omega_n}{3}$ be a $S_3$-free cgh. For $0 \leq i \leq n - 1$, $|G_i''| \leq n - 3$.
 
 --- 
@@ -480,3 +507,12 @@ $$
 $$
 
 ----
+# Conclusion
+
+![](img/results.png)
+
+---
+# Acknowledgements
+
+* I'd like to say "thanks" to my wife, Kizzy, for transforming my hand drawings into beautiful images!
+![](img/ack.jpeg)
