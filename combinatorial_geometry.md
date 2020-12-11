@@ -6,7 +6,7 @@ class: invert
 
 # Combinatorics Seminar
 ## Combinatorial Geometry
- Based on "Extremal problems for pairs of triangles in a convex polygon"
+ From article "Extremal problems for pairs of triangles in a convex polygon"
 ##### – Hallison Paz
 December 11th 2020
 
@@ -20,14 +20,6 @@ December 11th 2020
 * We'll analyse the intersection patterns of pairs of triangles (r = 3)
 ![configuracoes](img/configuracoes8.png)
 ----
-# Two separated triangles, $M_1$ 
-$$ex_\circlearrowright(n,M_1) = \triangle(n) + \frac{n(n-3)}{2}$$
-
-where:
-
-$$\triangle(n) = \bigg\{ \frac{(n+1)n(n-1)}{24}$$
----
-
 # Warm up
 
 * We start with two base constructions that will help us with configurations $M_1$ and $D_1$
@@ -35,37 +27,47 @@ $$\triangle(n) = \bigg\{ \frac{(n+1)n(n-1)}{24}$$
 ---
 # Construction 1 - $\mathcal{H}^*(n)$
 
-**For $n ≥ 3$ odd**, let $\mathcal{H}^*(n)$ comprise the single cgh consisting of triangles which contain in their interior the centroid of $\Omega_n$. 
-
-![c1-odd](img/im01.png)
+* **For $n ≥ 3$ odd**, let $\mathcal{H}^*(n)$ comprise **the single cgh** consisting of triangles which contain in their interior the centroid of $\Omega_n$. 
+* **For $n ≥ 4$ even**, each $H \in \mathcal{H}^*(n)$ consists of all triangles which contain the centroid of $\Omega_n$ and, for each diameter $\{ v_i, v_{i+n/2}\}$ of $\Omega_n$, we either add all triangles $\{v_i, v_j, v_{i+n/2}\}$ where $v_i < v_j < v_{i+n/2}$, or all triangles $\{v_i, v_j, v_{i+n/2}\}$ where $v_{i+n/2} < v_j < v_i$.
 
 ---
-* There are i + 1 choices of $v′, v′′$ so that the shorter arc has exactly $i$ vertices of $\Omega_n$ in the interior, and $i ≤ n−3$.
+* There are $i + 1$ choices of $v′, v′′$ so that the shorter arc has exactly $i$ vertices of $\Omega_n$ in the interior, and $i ≤ n−3$.
 * Summing over $i$ (and dividing by 3 because we count each triangle 3 times), we get that the number of triangles containing $x$ equals:
 
-![FIGURA 2](img/im02.png)
+![FIGURA 2](img/im01.png)
 
 $$|\mathcal{H}^*(n)| = \frac{n}{3}(1 + 2 + ... + \frac{n-1}{2}) = \frac{(n+1)n(n-1)}{24} $$
 
 ---
-**For $n ≥ 4$ even**, each $H \in \mathcal{H}^*(n)$ consists of all triangles which contain the centroid of $\Omega_n$ and, for each diameter $\{ v_i, v_{i+n/2}\}$ of $\Omega_n$, we either add all triangles $\{v_i, v_j, v_{i+n/2}\}$ where $v_i < v_j < v_{i+n/2}$, or all triangles $\{v_i, v_j, v_{i+n/2}\}$ where $v_{i+n/2} < v_j < v_i$.
+**For $n ≥ 4$ even**, we want the commom size of each $H \in \mathcal{H}^*(n)$
+* We do the same count, but first excluding the triangles with one side being the diameter of the circle. We get: 
+  
+$$\frac{n(n-2)(n-4)}{24}$$
 
 ![](img/im03.png)
 
 ---
-* **If $n$ is even** then we do the same count, but first excluding the triangles with one side being the diameter of the circle. We get:
-$$\frac{n(n-2)(n-4)}{24}$$
-
-* Next, out of triangles with one side being the diameter exactly half of them contain $x$, which equals $\frac{n(n−2)}{4}$  Summing up, we get that the number of triangles containing x is 
+* Next, out of triangles with one side being the diameter exactly half of them contain $x$, which equals $\frac{n(n−2)}{4}$  Summing up, we have:
 $$|\mathcal{H}^*(n)| = \frac{n(n-2)(n-2)}{24}$$
 
+![](img/im03.png)
+
 ---
+We define: 
+$$\triangle(n) =
+  \begin{cases}
+                                   \frac{(n+1)n(n-1)}{24} & \text{if n is odd} \\
+                                   \frac{(n+2)n(n-2)}{24} & \text{if n is even}
+  \end{cases}$$
+
 * As no two triangles in any $H \in \mathcal{H}^*(n)$ have disjoint interiors, we have:
 
 $$ex_\circlearrowright(n,\{M_1, S_1, D_1\}) \ge \triangle(n)$$
 
-* Frankl, Holmsen and Kupavskii posed the following problem: *What happens if one relaxes the intersecting condition and allows triangles to intersect on the boundary?*
-* One way to see it is we allow $S_1$ and $D_1$ and look for $ex_\circlearrowright(n,M_1)$
+---
+* Frankl, Holmsen and Kupavskii posed the following problem: 
+  * *What happens if one relaxes the intersecting condition and allows triangles to intersect on the boundary?*
+* One way to see it is we allow $S_1$ and $D_1$
 
 ---
 # Construction 2, $\mathcal{H}'(n)$
@@ -97,24 +99,25 @@ $$ex_\circlearrowright(n,M_1) = \triangle(n) + \frac{n(n-3)}{2}$$
 # Proof of Theorem 1 (partial)
 
 * Let n ≥ 3 be odd. 
-* If $H \in H'(n)$ then we are done, so we may assume H contains a triangle $T(i, j, k) = {v_i, v_j, v_k}$ with $vi < v_j < v_k < v_{i+(n−1)/2}$. 
+* If $H \in H'(n)$ then we are done, so we may assume H contains a triangle $T(i, j, k) = {v_i, v_j, v_k}$ with $v_i < v_j < v_k < v_{i+(n−1)/2}$. 
 *  Moreover, we may assume that among all such triangles, $T(i, j, k)$ is the triangle where the longest edge ${v_i, v_k}$ is as short as possible. 
 
 ---
-* Replace all triangles $T(i, j', k) \in H$ with $i < j' < k$ with all triangles $T(i − 1, k + 1, l)$ where j and l are on opposite sides of the edge ${v_i, v_k}$ 
+* Replace all triangles $T(i, j', k) \in H$ with $i < j' < k$ with all triangles $T(i − 1, k + 1, l)$ where $j'$ and $l$ are on opposite sides of the edge ${v_i, v_k}$ 
 
 ![](img/m1proof.png)
 
 ---
-* Since $T(i, j, k)$ and $T(i − 1, k + 1, l)$ form a copy of $M_1$, $T(i − 1, k + 1, l) \notin H$ for all such l. 
-* Moreover, since $v_i < v_k < v_{i+(n−1)/2}$, the number of triangles $T(i − 1, k + 1, l)$ that we added is greater than the number of triangles $T(i, j, k)$ that we deleted. 
-	* Note that none of $T(i-1, k+1, l)$ is in $H$, otherwise they would form a copy of $M_1$ with $T(i, j, k)$
+* Since $T(i, j, k)$ and $T(i − 1, k + 1, l)$ form a copy of $M_1$, $T(i − 1, k + 1, l) \notin H$ for all such $l$. 
+* Since $v_i < v_k < v_{i+(n−1)/2}$, the number of triangles $T(i − 1, k + 1, l)$ that we added is greater than the number of triangles $T(i, j', k)$ that we deleted. 
 * This produces a cgh $H'$ with $|H'| > |H|$. Since $H$ is extremal $M_1$-free, there exists a copy of $M_1$ in $H'$, which must contain a triangle $T(i − 1, k + 1, l) ∈ H'$
 
 ---
 *  Since all triangles $T(i − 1, k + 1, l)$ intersect, the other triangle in the copy of M1 must be $T(f, g, h) \in H$. 
-* Since $H$ is $M_1$-free, $T(f, g, h)$ intersects $T(i, j, k)$, which implies $v_i ≤ v_f < v_g < v_h ≤ v_k$ and $\{v_f, v_h\} \ne \{v_i, v_k\}$. 
-* However, then the edge $\{vf, vh\}$ is shorter than the edge $\{vi, vk\}$, a **contradiction**.
+* Since $H$ is $M_1$-free, $T(f, g, h)$ intersects $T(i, j, k)$, which implies 
+  * $v_i ≤ v_f < v_g < v_h ≤ v_k$ and $\{v_f, v_h\} \ne \{v_i, v_k\}$. 
+  * However, then the edge $\{v_f, v_h\}$ is shorter than the edge $\{v_i, v_k\}$, a **contradiction**.
+* So, there is no triangle $T(i, j, k) = {v_i, v_j, v_k}$ with $v_i < v_j < v_k < v_{i+(n−1)/2}$ and $H \in \mathcal{H}'(n)$
 
 ---
 * Now let $n \geq 4$ be even and let $H$ be an extremal $n$-vertex $M_1$-free cgh. If $H \in \mathcal{H}'(n)$ we are done, so suppose $H \not \in \mathcal{H}'(n)$. 
@@ -123,7 +126,7 @@ $$ex_\circlearrowright(n,M_1) = \triangle(n) + \frac{n(n-3)}{2}$$
 * The pairs $\{v_i,v_{i + n/2 - 1}\}$ for which there exists such a triangle $T(i,j,k)$ must pairwise intersect (possibly at their endpoints) otherwise we find a copy of $M_1$ in $H$. In particular, by definition of Construction 2, $H \in \mathcal{H}'(n)$.
 
 ---
-# Tangent Triangles $D_1$
+# Tangent Triangles, $D_1$
 
 ### Theorem 3: 
 * Let $n \geq 3$. Then the maximum over all sets of $n$ points in the plane, no three collinear, of the size of a $D_1$-free family of triangles spanned by the points is $\triangle(n)$.
@@ -131,7 +134,7 @@ $$ex_\circlearrowright(n,M_1) = \triangle(n) + \frac{n(n-3)}{2}$$
   
   $$ex_\circlearrowright(n, D_1) \le \triangle(n)$$
 ---
-# Tangent Triangles $D_1$
+# Tangent Triangles, $D_1$
 * Since $H \in H ^* (n)$ is $D_1$-free, we know $ex_\circlearrowright(n, D_1) \ge \triangle(n)$
 * With theorem 3, we have:
   
@@ -161,7 +164,7 @@ $$ex_\circlearrowright(n,M_1) = \triangle(n) + \frac{n(n-3)}{2}$$
 ---
 # Tangent Triangles - $D_1$
 * We conclude that $|H|$ is at most the number of directed triangles in an orientation of a subgraph of $K_n$ 
-* Which was shown to be at most $T(n) = \triangle(n)$ as required (Moon, 1968).
+* Which was shown to be at most  $\triangle(n)$ as required (Moon, 1968).
 
 ---
 # Maximum of directed triangles in a tournament
@@ -201,7 +204,7 @@ $$ex(n,M_3) = {n \choose 3} - {n - 3 \choose 3}$$
 ---
 # Crossing triangles, $M_3$
 
-The following theorem implies Theorem \ref{m3}, since $ex(n,M_3) = ex_{\to}(n,M_3)$:
+The following theorem implies Theorem 3, since $ex(n,M_3) = ex_{\to}(n,M_3)$:
 
 
 ### *Theorem 9*
@@ -214,7 +217,7 @@ $$ex_{\to}(n, M_3)=  {n \choose 3} - {n - 3 \choose 3}$$
 ---
 # Proof of theorem 9
 * Let $H$ be an $M_3$-free ordered triple system with $n$ vertices. 
-* The strategy is to use induction. *Easy to check on $n = 6$*
+* The strategy is to use induction.
 ![](img/im12.png)
 
 ---
@@ -242,7 +245,7 @@ $$ex_{\to}(n, M_3)=  {n \choose 3} - {n - 3 \choose 3}$$
 * Therefore no two edges of $G$ cross 
   * Which implies $G$ is an outerplane graph with $n - 2$ vertices. 
   * $|G| \leq 2n - 7$, by Euler's Formula.
-  * $|G| = |H_2|$ (we have a bijection)
+* We know $|G| = |H_2|$ 
 * So, we can bound $|H|$:
 
 $$|H| = |H_1| + |H_2| + |H_3| \leq (n - 2) + (2n - 7) + {n - 1 \choose 3} - {n - 4 \choose 3} = {n \choose 3} - {n - 3\choose 3}$$
@@ -267,24 +270,25 @@ $$ex(n,M_2) = {n \choose 2} - 2$$
 ---
 # Proof of Theorem 5
 
-* Strategy is induction on $n$ for $n \geq 7$. 
+* Strategy is induction on $n$
   * When $n=7$, since cyclically consecutive triples $\{v_i,v_{i+1},v_{i+2}\}$ are never in $M_2$, we may assume these seven edges are in any $M_2$-free cgh. 
-  * For the remaining twenty-eight triples, we create a graph with vertex sets consisting of these triples and form an edge if two of the triples form a copy of $M_2$. 
+  * For the remaining 28 triples, we create a graph with vertex sets consisting of these triples and form an edge if two of the triples form a copy of $M_2$. 
   * A computer aided calculation  then yields this graph has independence number $12$ and hence $ex(7,M_2) = 12 + 7 = \binom{7}{2}-2$.
 --- 
 # Proof of theorem 5 
-* For the induction step, we plan to find two consecutive $u,v \in \Omega_n$ with degree at most three and whose common link graph $G_{u} \cap G_{v}$ has at most $n - 3$ edges.
+* For the induction step, we plan to find two consecutive $u,v \in \Omega_n$ with degree at most 3 and whose common link graph $G_{u} \cap G_{v}$ has at most $n - 3$ edges.
 
 --- 
 # Definitions
  * Let $H$ be a maximal $M_2$-free cgh on $\Omega_n$, and $H' \subset H$ be the cgh after removing all consecutive triples $\{v_i,v_{i+1},v_{i+2}\}$. 
  * Let $d(v_i,v_j)$ be the length of the path on the perimeter of the polygon starting with $v_i$ and moving clockwise to $v_j$. 
- * For an edge $e = \{v_i, v_{i+1}, v_k\} \in H'$ -- we only consider such edges
+ * For an edge $e = \{v_i, v_{i+1}, v_k\} \in H'$
     * let $\ell(e) = \min\{d(v_{i + 1},v_k),d(v_k,v_i)\}$.
+    * (we only consider such edges)
 
 --- 
 
-## Lemma 6.1 (should be 5.1)
+# Lemma 6.1 (should be 5.1)
 Let $H \subset \binom{\Omega_n}{3}$ be a maximal $M_2$-free cgh and $H'$ be as above. Then 
 1. For consecutive $u,v \in \Omega_n$, $|G_{u} \cap G_{v}| \leq n - 3$ with equality only if $G_u \cap G_v$ is a star.
 2. There exists $v_i \in \Omega_n$ such that the degree of $\{v_{i},v_{i + 1}\}$ is at most three in $H$.
@@ -295,13 +299,15 @@ Let $H \subset \binom{\Omega_n}{3}$ be a maximal $M_2$-free cgh and $H'$ be as a
 
 --- 
 * If $\{w,x\},\{y,z\}$ are disjoint edges in $G_{u,v}$:
-  * if $v < w < x < y < z < u < v$ or $v < w < y < z < x < u < v$ -- this means that $\{w,x\},\{y,z\}$ do not cross 
+  * if $v < w < x < y < z < u < v$ or $v < w < y < z < x < u < v$ 
+    * this means that $\{w,x\},\{y,z\}$ do not cross 
     * then $\{u,w,x\},\{v,y,z\}$ form $M_2$. 
 ![](img/im15.png)
 
 ---
 * If $\{w,x\},\{y,z\}$ are disjoint edges in $G_{u,v}$:
-  * If on the other hand $v < w < y < x < z < u < v$ -- this means $\{w,x\}, \{y,z\}$ do cross
+  * If on the other hand $v < w < y < x < z < u < v$ 
+    * this means $\{w,x\}, \{y,z\}$ do cross
     * then $\{u,y,z\},\{v,w,x\}$ form $M_2$. 
 ![](img/im16.png)
 --- 
@@ -380,6 +386,8 @@ $$ |H| = |H_0| + |G| + d_H(v_i,v_{i + 1}) \leq {n - 1 \choose 2} - 2 + n - 4 + 3
 
 This proves Theorem.
 
+![](img/im20.png)
+
 --- 
 # Crossing triangles with a common vertex, $S_3$
 
@@ -435,7 +443,7 @@ Let $H \subset \binom{\Omega_n}{3}$ be a $S_3$-free cgh. For $0 \leq i \leq n - 
 
 ---
 * We may assume $i = 0$. 
-* If we add to $G_i''$ all $n - 2$ edges $\{v_j,v_{j+1}\}$ for $1 \leq j < n$: 
+* If we add to $G_i''$ all $n - 2$ edges $\{v_j,v_{j+1}\}$ for $1 \leq j < n-1$: 
   * we obtain an outerplanar graph $G$ with $n - 1$ vertices
   * So $|G| \leq 2(n - 1) - 3 = 2n - 5$. 
   * Removing the $n - 2$ added edges gives $|G_i''| \leq n - 3$.
@@ -451,7 +459,7 @@ For each $i$ with $0 \leq i \leq n/2 - 1$, $|G_{2i}'| + |G_{2i+1}'| \leq n$.
 * Let $G$ denote the multigraph obtained by superimposing the graphs $G_0'$ and $G_1'$, so $|G| = |G_0'| + |G_1'|$. 
 * Each component $C$ of $G$ is a path $P$ with some edges of multiplicity two. 
 * If $\{v_{j-1},v_j\} \in P \cap G_0'$, then $\{v_j,v_{j+1}\} \not \in P \cap G_1'$, 
-  * otherwise $\{v_0,v_j,v_{j+1}\},\{v_1,v_{j-1},v_j\}$ form $S_3 - contradiction. 
+  * otherwise $\{v_0,v_{j-1},v_{j}\},\{v_1,v_{j},v_{j+1}\}$ form $S_3$ - contradiction. 
 ![s3pic](img/s3picture.png)
 
 ---
@@ -461,40 +469,14 @@ and all edges of $P$ after $\{v_j,v_{j+1}\}$ are in $G_0'$ only, whereas $\{v_j,
 $|G| = |C_1| + |C_2| + \dots + |C_r| \leq |V(C_1)| + |V(C_2)| + \dots + |V(C_r)| = |V(G)| = n$.
 
 --- 
-
-
-
---- 
 We now complete the proof of $ex(n,S_3) \leq n(n - 2)/2$, using the following identity:
 $$
 3|H| = \sum_{i = 0}^{n-1} (|G_i'| + |G_i''|) = \sum_{i = 0}^{n/2-1} (|G_{2i}'| + |G_{2i+1}'|) + \sum_{i = 0}^{n-1} |G_i''|.
 $$
 
-We apply Lemmas XXX and XXX to each term in the sums to obtain:
+We apply Lemmas 7.1 and 7.2 to each term in the sums to obtain:
 $$
 3|H| \leq  \sum_{i = 0}^{n/2-1} n + \sum_{i = 0}^{n - 1} (n - 3) =  \frac{1}{2}n^2 + n(n - 3) = \frac{3}{2}n(n - 2).
 $$
 
 ----
-
-# Theorem 3 - extremal number of $D_1$
-
-* Let n ≥ 3. Then the maximum over all sets of n points in the plane, no three collinear, of the size of a D1-free family of triangles spanned by the points is ·?(n).
-
----
-* Let P be a set of n points in the plane with no three collinear, and let H be a D1-free family of triangles on P. 
-* For every pair {vi, vj} ∈ ∂H, there is an edge {vi, vj, vk} ∈ H such that either vi < vk < vj or vi < vj < vk. 
-  * Note that both possibilities cannot happen simultaneously since that would yield a copy of D1. 
-
-FIGURA 6
-
-* If vi < vk < vj then we orient {vi, vj} as (vi, vj) and if vi < vj < vk then we orient {vi, vj} as (vj, vi). 
-  * This yields an orientation of ∂H. 
-
-FIGURA 7
-
----
-  * The main observation is that there is no edge {vi, vj, vk} ∈ H such that {vi, vj, vk} is not a directed triangle in the orientation. 
-    * Indeed, if we have (vi, vj) and (vi, vk), where vi < vj < vk, then there is vl with vi < vl < vj and triangle {vi, vl, vj}. 
-    * Together with {vi, vj, vk} we obtain a copy of D1. 
-  * We conclude that |H| is at most the number of directed triangles in an orientation of a subgraph of $K_n$ which is at most $T(n)$ as required (Moon, 1968)
